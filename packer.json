@@ -10,8 +10,7 @@
     "secret_key": "{{user `aws_secret_key`}}",
     "subnet_id": "subnet-05f17c9de25b45b3a",
     "associate_public_ip_address": "true",
-    "ssh_keypair_name": "sam-watson-eng-48-test",
-    "ssh_private_key_file": "~/.ssh/sam-watson-eng-48-test.pem",
+
 
 
     "region": "eu-west-1",
