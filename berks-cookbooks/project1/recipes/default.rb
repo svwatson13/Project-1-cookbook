@@ -4,14 +4,21 @@
 #
 # Copyright:: 2020, The Authors, All Rights Reserved.
 
-
-execute "update" do
-  command "sudo apt-get update"
+execute 'apt-update' do
+  command 'sudo apt-get update'
 end
 
-package "python3-dev"
+apt_update "update" do
+  action :update
+end
 
-package "python3-pip"
+package "python3-dev" do
+  action :install
+end
+
+package "python3-pip" do
+  action :install
+end
 
 execute "update" do
   command "sudo apt-get update"
@@ -19,7 +26,7 @@ end
 
 directory 'app' do
   mode '0777'
-  path 'home/ubuntu/app'
+  path '/home/ubuntu/app'
   action :create
 end
 
@@ -37,7 +44,7 @@ end
 
 directory 'downloads' do
   mode '0777'
-  path 'home/ubuntu/downloads'
+  path '/home/ubuntu/downloads'
   action :create
 end
 
