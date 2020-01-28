@@ -42,13 +42,13 @@ execute "pip install requirements" do
 end
 
 
-directory 'downloads' do
+directory 'Downloads' do
   mode '0777'
-  path '/home/ubuntu/downloads'
+  path '/home/ubuntu/Downloads'
   action :create
 end
 
- file '/home/ubuntu/downloads/ItJobsWatchTop30.csv' do
+ file '/home/ubuntu/Downloads/ItJobsWatchTop30.csv' do
   action :create
   mode '777'
 end
